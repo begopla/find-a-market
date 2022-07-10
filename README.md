@@ -1,7 +1,7 @@
 # MERN Boilerplate
 
 This is a MERN stack application boilerplate.
-The client is using Vite and server is using JWT auth
+The client is using CRA and the server is using Express and JWT auth
 
 ## Setting up
 
