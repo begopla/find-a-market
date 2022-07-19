@@ -2,10 +2,7 @@ const { Schema, model } = require("mongoose")
 
 const marketSchema = new Schema(
     {
-        name: {
-            type: String,
-            require: true
-        },
+        name: {type: String, require: true},
         imageUrl: String,
         location: {
             city: String,
@@ -15,23 +12,17 @@ const marketSchema = new Schema(
         },
         type: {
             type: String,
-            enum: ["Farmers market", "Fresh Food market", "Flea market", "Street Food market"]
+            enum: ["Farmers market", "Fresh Food market", "Flea market", "Street Food market", "Bazaar"]
         },
         Description: String,
         opening_days: {
             type: String,
-            enum: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+            enum: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Every day"]
         },
         website: String,
         stars: Number,
-        author: {
-            type: Schema.Types.ObjectId,
-            ref: "User"
-        },
-        reviews: [{
-            type: Schema.Types.ObjectId,
-            ref: "Review"
-        }]
+        author: {type: Schema.Types.ObjectId, ref: "User"},
+        reviews: [{type: Schema.Types.ObjectId, ref: "Review"}]
     }
 )
 
